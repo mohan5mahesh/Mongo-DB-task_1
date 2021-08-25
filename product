@@ -9,3 +9,6 @@ db.collection.find({"$or": [ { product_price: {"$lte": 400} }, { product_price: 
 
 List the four product which are grater than 500 in price
 db.product_list.find({product_price: {"$gte": 500}}).limit(4)
+
+Find the product name and product material of each products
+db.product_list.find({},{product_material: 1,product_name: 1})
