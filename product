@@ -12,3 +12,6 @@ db.product_list.find({product_price: {"$gte": 500}}).limit(4)
 
 Find the product name and product material of each products
 db.product_list.find({},{product_material: 1,product_name: 1})
+
+Find the product with a row id of 10
+db.product_list.find({id: "10"})
