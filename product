@@ -6,3 +6,6 @@ db.product_list.find({"$and": [{product_price: {"$gte": 400}},{product_price: {"
 
 Find the product price which are not between 400 to 600
 db.collection.find({"$or": [ { product_price: {"$lte": 400} }, { product_price: {"$gte": 600}} ]} )
+
+List the four product which are grater than 500 in price
+db.product_list.find({product_price: {"$gte": 500}}).limit(4)
